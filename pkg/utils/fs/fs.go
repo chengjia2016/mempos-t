@@ -13,6 +13,7 @@ const (
 
 var supportedTypes = []string{OsType}
 
+// pos in mem
 func GetFs(fs string) (afero.Fs, error) {
 	switch fs {
 	case OsType:
@@ -20,5 +21,5 @@ func GetFs(fs string) (afero.Fs, error) {
 	case Mem:
 		return afero.NewMemMapFs(), nil
 	}
-	return nil, fmt.Errorf("unknown filesystem type provided: %s (supported types: %v)", fs, supportedTypes)
+	return nil, fmt.Errorf("unknown? filesystem type provided: %s (supported types: %v)", fs, supportedTypes)
 }
