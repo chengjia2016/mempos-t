@@ -1,0 +1,9 @@
+language: go
+go:
+  - "1.13"
+  - tip
+
+script:
+  - make build
+  - make verify
+  - make test
